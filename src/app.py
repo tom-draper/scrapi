@@ -17,7 +17,7 @@ def get_img(url: str = None):
     return scrape_img(url)
 
 
-@app.get("/link")
+@app.get("/api")
 def get_link(url: str = None):
     return {'test': url}
     if url is None:
