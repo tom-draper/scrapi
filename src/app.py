@@ -12,8 +12,7 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/api/img/")
-@app.get("/api/image/")
+@app.get("/api/img")
 def get_img(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
@@ -22,9 +21,7 @@ def get_img(url: str = None):
     return scrape_img(url)
 
 
-@app.get("/api/link/")
-@app.get("/api/a/")
-@app.get("/api/href/")
+@app.get("/api/link")
 def get_link(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
