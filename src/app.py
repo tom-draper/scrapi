@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/api")
 def read_root():
-    return {"Hello": "World"}
+    return {"status": "live"}
 
 
 @app.get("/api/img")
@@ -23,6 +23,7 @@ def get_img(url: str = None):
 
 @app.get("/api/link")
 def get_link(url: str = None):
+    return {'test': 'test'}
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
