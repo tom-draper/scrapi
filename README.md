@@ -7,7 +7,7 @@ A REST API for simple web scraping services.
 To get a list of links on a webpage:
 
 ```md
-http://scrapi.vercel.app/link/?url=https://www.google.com
+https://scrapi.vercel.app/api/link/?url=https://www.google.com
 ```
 
 ## Image
@@ -15,5 +15,5 @@ http://scrapi.vercel.app/link/?url=https://www.google.com
 To get a list of the images on a webpage:
 
 ```md
-http://scrapi.vercel.app/img/?url=https://www.google.com
+https://scrapi.vercel.app/api/img/?url=https://www.google.com
 ```
