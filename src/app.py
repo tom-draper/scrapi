@@ -8,6 +8,9 @@ app = FastAPI()
 
 
 @app.get("/api/img")
+@app.get("/api/imgs")
+@app.get("/api/image")
+@app.get("/api/images")
 def get_img(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
@@ -16,7 +19,10 @@ def get_img(url: str = None):
     return scrape_img(url)
 
 
+@app.get("/api/links")
 @app.get("/api/link")
+@app.get("/api/a")
+@app.get("/api/href")
 def get_link(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
