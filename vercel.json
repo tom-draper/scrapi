@@ -11,15 +11,7 @@
     ],
     "routes": [
         {
-            "src": "/api/*",
-            "dest": "/src/app.py"
-        },
-        {
-            "src": "/api/img",
-            "dest": "/src/app.py"
-        },
-        {
-            "src": "/api/link",
+            "src": "/api/(.*)",
             "dest": "/src/app.py"
         }
     ]

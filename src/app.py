@@ -16,7 +16,7 @@ def get_img(url: str = None):
     return scrape_img(url)
 
 
-@app.get("/api")
+@app.get("/api/link")
 def get_link(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
