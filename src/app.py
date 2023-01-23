@@ -2,7 +2,7 @@ import uvicorn
 import validators
 from fastapi import FastAPI
 
-from src.scrape import scrape_img, scrape_link
+from .scrape import scrape_img, scrape_link
 
 app = FastAPI()
 
@@ -14,6 +14,7 @@ def read_root():
 
 @app.get("/api/img")
 def get_img(url: str = None):
+    return {'test': url}
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
@@ -23,7 +24,7 @@ def get_img(url: str = None):
 
 @app.get("/api/link")
 def get_link(url: str = None):
-    return {'test': 'test'}
+    return {'test': url}
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
