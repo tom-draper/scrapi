@@ -2,7 +2,7 @@ import uvicorn
 import validators
 from fastapi import FastAPI
 
-from scrape import scrape_img, scrape_link
+from src.scrape import scrape_img, scrape_link
 
 app = FastAPI()
 
