@@ -13,6 +13,14 @@
         {
             "src": "/api/*",
             "dest": "/src/app.py"
+        },
+        {
+            "src": "/api/img",
+            "dest": "/src/app.py"
+        },
+        {
+            "src": "/api/link",
+            "dest": "/src/app.py"
         }
     ]
 }

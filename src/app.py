@@ -7,9 +7,8 @@ from .scrape import scrape_img, scrape_link
 app = FastAPI()
 
 
-@app.get("/img")
+@app.get("/api/img")
 def get_img(url: str = None):
-    return {'test': url}
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
@@ -19,7 +18,6 @@ def get_img(url: str = None):
 
 @app.get("/api")
 def get_link(url: str = None):
-    return {'test': url}
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
