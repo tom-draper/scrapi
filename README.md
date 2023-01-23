@@ -1,6 +1,6 @@
 # ScrAPI
 
-A REST API for simple web scraping services.
+A REST API for simple web scraping operations.
 
 ## Links
 
