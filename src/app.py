@@ -14,7 +14,7 @@ def read_root():
 
 @app.get("/api/img/")
 @app.get("/api/image/")
-async def get_img(url: str = None):
+def get_img(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
@@ -25,7 +25,7 @@ async def get_img(url: str = None):
 @app.get("/api/link/")
 @app.get("/api/a/")
 @app.get("/api/href/")
-async def get_link(url: str = None):
+def get_link(url: str = None):
     if url is None:
         return {"status": 400, "message": "URL parameter required."}
     elif not validators.url(url):
