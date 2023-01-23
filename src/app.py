@@ -7,12 +7,12 @@ from .scrape import scrape_img, scrape_link
 app = FastAPI()
 
 
-@app.get("/api")
+@app.get("/api/")
 def read_root():
     return {"status": "live"}
 
 
-@app.get("/api/img")
+@app.get("/api/img/")
 def get_img(url: str = None):
     return {'test': url}
     if url is None:
@@ -22,7 +22,7 @@ def get_img(url: str = None):
     return scrape_img(url)
 
 
-@app.get("/api/link")
+@app.get("/api/link/")
 def get_link(url: str = None):
     return {'test': url}
     if url is None:
